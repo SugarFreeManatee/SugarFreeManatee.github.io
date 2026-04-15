@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: Proffessor at PUC Chile. PhD Student University of Toronto.
+subtitle: Adjunct Professor at PUC Chile. Incoming PhD Student at the University of Toronto.
 
 profile:
   align: right
@@ -10,7 +10,7 @@ profile:
   image_circular: false # crops the image to make it circular
   more_info: >
     <p>Santiago, Chile</p>
-    <p>rtelberg [at] uc.cl</p>
+    <p>rafael.elberg [at] uc.cl</p>
 
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
@@ -26,10 +26,10 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-I am an incoming PhD student in the Department of Computer Science at the University of Toronto. I will be supervised by Professor Sheila McIlraith. Prior to this, I was a Master's student at the Pontificia Universidad Católica de Chile (PUC Chile), affiliated with the National Center for Artificial Intelligence (CENIA).
+I am an incoming PhD student in the Department of Computer Science at the University of Toronto. Prior to this, I completed my Master's degree at the Pontificia Universidad Catolica de Chile (PUC Chile), where I specialized in Computer Science.
 
-My interests mainly lie at the intersection of computer vision and deep learning. This includes self-supervised representation learning, compositional generalization, and frameworks for long-tail image generation. I am particularly interested in building AI systems that can effectively understand complex, compositional structures. You may find my list of publications here.
+My interests lie at the intersection of computer vision and deep learning, including self-supervised representation learning, compositional generalization, and long-tail image generation.
 
-I was born in Santiago, Chile. I grew up in Boston, MA, and Madrid, before finally coming back to Chile to finish my schooling. Prior to my PhD, I attended PUC Chile, where I obtained my Master's degree.
+I am currently teaching Discrete Mathematics (IIC1253) at PUC Chile.
 
-Aside from my research, I will be teaching the discrete mathematics IIC1253 course at PUC during the first semester of 2026. I also actively contribute to educational open-source projects, such as creating syllabus materials for the university-level Artificial Intelligence course IIC2613.
+Alongside research, I have worked as a teaching assistant across multiple PUC Chile courses, including Deep Learning, Advanced Topics in AI, Artificial Intelligence, Data Structures and Algorithms, Intro to Programming, and Advanced Programming.
