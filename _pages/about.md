@@ -26,10 +26,12 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-I am an incoming PhD student in the Department of Computer Science at the University of Toronto. Prior to this, I completed my Master's degree at the Pontificia Universidad Catolica de Chile (PUC Chile), where I specialized in Computer Science.
+I am an incoming PhD student in the Department of Computer Science at the University of Toronto. Before this, I completed my Master's degree in Computer Science at the Pontificia Universidad Católica de Chile (PUC Chile).
 
-My interests lie at the intersection of computer vision and deep learning, including self-supervised representation learning, compositional generalization, and long-tail image generation.
+My research interests lie primarily in the role of communication in learning algorithms, from inducing compositional structure and improving generalization to enabling complex interactions between reinforcement learning agents. I am also broadly interested in machine learning theory and neurosymbolic AI.
 
 I am currently teaching Discrete Mathematics (IIC1253) at PUC Chile.
 
-Alongside research, I have worked as a teaching assistant across multiple PUC Chile courses, including Deep Learning, Advanced Topics in AI, Artificial Intelligence, Data Structures and Algorithms, Intro to Programming, and Advanced Programming.
+Alongside my research, I have worked as a teaching assistant for several courses at PUC Chile, including Deep Learning, Advanced Topics in AI, Artificial Intelligence, Data Structures and Algorithms, Introduction to Programming, and Advanced Programming.
+
+In my free time, I enjoy reading, especially science fiction. On my books page, I have listed some of my all-time favorites. Please feel free to suggest others.
