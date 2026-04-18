@@ -2,7 +2,7 @@
 layout: book-review
 title: The Hellbound Heart
 author: Clive Barker
-cover: {hellbound-heart.jpg}
+cover: { hellbound-heart.jpg }
 olid: OL257785W # use Open Library ID to fetch cover (if no `cover` is provided)
 isbn: 7539967447 # use ISBN to fetch cover (if no `olid` is provided, dashes are optional)
 categories:

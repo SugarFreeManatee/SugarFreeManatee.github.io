@@ -36,6 +36,7 @@ By the end of the course, the student will be able to:
 ## Methodology
 
 Weekly Modules:
+
 - Lectures: 2
 - Teaching Assistantships: 1
 
