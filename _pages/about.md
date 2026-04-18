@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: Adjunct Professor at PUC Chile. Incoming PhD Student at the University of Toronto.
+subtitle: Adjunct Professor at PUC Chile. Incoming PhD Student at the University of Toronto
 
 profile:
   align: right
