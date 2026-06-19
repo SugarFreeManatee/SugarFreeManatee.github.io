@@ -172,24 +172,15 @@ latest_posts:
 
       let currentSrc = "";
       const snapshots = JSON.parse(data.textContent).map(parseSnapshot).filter((item) => item.src && item.name);
-      const places = snapshots.filter((item) => item.kind === "place");
-      const baileys = snapshots.filter((item) => item.kind === "Bailey");
 
       const randomFrom = (items) => items[Math.floor(Math.random() * items.length)];
 
       const nextSnapshot = () => {
         if (snapshots.length <= 1) return snapshots[0];
 
-        const pool =
-          places.length && baileys.length
-            ? Math.random() < 0.5
-              ? places
-              : baileys
-            : snapshots;
-
-        let snapshot = randomFrom(pool);
-        while (snapshot.src === currentSrc && pool.length > 1) {
-          snapshot = randomFrom(pool);
+        let snapshot = randomFrom(snapshots);
+        while (snapshot.src === currentSrc && snapshots.length > 1) {
+          snapshot = randomFrom(snapshots);
         }
 
         return snapshot;
