@@ -2,7 +2,7 @@
 layout: page
 permalink: /publications/
 title: publications
-description: Recent papers and preprints on learning, communication, and representation.
+description: Recent papers and preprints.
 nav: true
 nav_order: 2
 ---
@@ -11,13 +11,12 @@ nav_order: 2
 
 <section class="publication-page-intro">
   <p>
-    My recent work studies how communication constraints, compositional structure, and representation learning shape intelligent systems.
+    My recent work studies how communication constraints induce compositional structure in learned representations.
   </p>
   <div class="publication-topic-list" aria-label="Publication topics">
     <span>compositionality</span>
     <span>communication</span>
-    <span>generative models</span>
-    <span>biomedical NLP</span>
+    <span>representation learning</span>
   </div>
 </section>
 

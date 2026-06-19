@@ -8,8 +8,8 @@ home_hero:
   kicker: Machine learning · communication · compositionality
   highlights:
     - Incoming PhD @ University of Toronto
-    - Adjunct Professor @ PUC Chile
-    - NeurIPS 2025 author
+    - Adjunct Lecturer @ PUC Chile
+    - Computer Engineering and CS MSc @ PUC Chile
   ctas:
     - label: CV
       url: /CV.pdf
@@ -18,6 +18,9 @@ home_hero:
     - label: Publications
       url: /publications/
       icon: ai ai-google-scholar
+    - label: GitHub
+      url: https://github.com/SugarFreeManatee
+      icon: fa-brands fa-github
     - label: Email
       url: mailto:rafael.elberg@uc.cl
       icon: fa-solid fa-envelope

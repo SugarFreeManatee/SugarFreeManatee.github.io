@@ -1,9 +1,14 @@
 ---
 layout: default
 ---
-{% assign year = page.started | date: '%Y' %}
+{% assign book_date = page.finished | default: page.started | default: page.date %}
+{% assign year = book_date | date: '%Y' %}
 {% assign tags = page.tags | join: '' %}
 {% assign categories = page.categories | join: '' %}
+{% assign goodreads_url = page.goodreads_url %}
+{% if goodreads_url == nil and page.goodreads_book_id %}
+  {% assign goodreads_url = page.goodreads_book_id | prepend: 'https://www.goodreads.com/book/show/' %}
+{% endif %}
 
 {% if page._styles %}
   <!-- Page/Post style -->
@@ -42,8 +47,12 @@ layout: default
           {% if page.started or page.finished %}
             &nbsp;&middot;&nbsp;
           {% endif %}
-          {% if page.goodreads_review %}
-            <a target="_blank" href="https://www.goodreads.com/review/show/{{ page.goodreads_review }}"><i class="fa-brands fa-goodreads-g"></i>
+          {% if page.goodreads_review or goodreads_url %}
+            {% if page.goodreads_review %}
+              <a target="_blank" href="https://www.goodreads.com/review/show/{{ page.goodreads_review }}"><i class="fa-brands fa-goodreads-g"></i>
+            {% else %}
+              <a target="_blank" href="{{ goodreads_url }}"><i class="fa-brands fa-goodreads-g"></i>
+            {% endif %}
           {% endif %}
           {% assign full_stars = page.stars | floor %}
           {% assign half_star = page.stars | minus: full_stars %}
@@ -58,9 +67,15 @@ layout: default
           {%- for i in (1..empty_stars) -%}
             <i class="fa-regular fa-star fa-sm"></i>
           {%- endfor -%}
-          {% if page.goodreads_review %}
+          {% if page.goodreads_review or goodreads_url %}
             </a>
           {% endif %}
+        {% endif %}
+        {% if goodreads_url and page.stars == nil %}
+          {% if page.started or page.finished %}
+            &nbsp;&middot;&nbsp;
+          {% endif %}
+          <a target="_blank" href="{{ goodreads_url }}"><i class="fa-brands fa-goodreads-g"></i> Goodreads</a>
         {% endif %}
         {% if page.buy_link %}
           {% if page.started or page.finished or page.stars %}
@@ -105,7 +120,11 @@ layout: default
     {% if content == '' %}
       <figure class="empty-review">
         {% if page.cover %}
-          <img class="empty-review-cover" alt="{{ page.title }} cover" src="{{ site.baseurl }}/{{ page.cover }}">
+          {% if page.cover contains '://' %}
+            <img class="empty-review-cover" alt="{{ page.title }} cover" src="{{ page.cover }}">
+          {% else %}
+            <img class="empty-review-cover" alt="{{ page.title }} cover" src="{{ site.baseurl }}/{{ page.cover }}">
+          {% endif %}
           <figcaption class="empty-review-caption">
             Cover of <em>{{ page.title }}</em>
           </figcaption>
@@ -136,7 +155,11 @@ layout: default
     {% else %}
       <figure>
         {% if page.cover %}
-          <img alt="{{ page.title }} cover" src="{{ site.baseurl }}/{{ page.cover }}">
+          {% if page.cover contains '://' %}
+            <img alt="{{ page.title }} cover" src="{{ page.cover }}">
+          {% else %}
+            <img alt="{{ page.title }} cover" src="{{ site.baseurl }}/{{ page.cover }}">
+          {% endif %}
           <figcaption>
             Cover of <em>{{ page.title }}</em>
           </figcaption>

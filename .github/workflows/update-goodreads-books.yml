@@ -1,0 +1,48 @@
+name: Update Goodreads Books
+
+on:
+  schedule:
+    - cron: "0 12 * * 0"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-goodreads-books:
+    runs-on: ubuntu-latest
+    env:
+      GOODREADS_USER_ID: ${{ vars.GOODREADS_USER_ID || secrets.GOODREADS_USER_ID || '185711372' }}
+      GOODREADS_SHELVES: read,currently-reading,to-read
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.3.5"
+
+      - name: Check Goodreads configuration
+        id: goodreads
+        run: |
+          if [ -z "$GOODREADS_USER_ID" ]; then
+            echo "configured=false" >> "$GITHUB_OUTPUT"
+            echo "GOODREADS_USER_ID is not configured; skipping import."
+          else
+            echo "configured=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Import Goodreads shelves
+        if: steps.goodreads.outputs.configured == 'true'
+        run: ruby bin/update_goodreads_books.rb --rss
+
+      - name: Commit and push if changed
+        if: steps.goodreads.outputs.configured == 'true'
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add _books/goodreads
+          git diff --staged --quiet || (
+            git commit -m "Update Goodreads books"
+            git push
+          )
