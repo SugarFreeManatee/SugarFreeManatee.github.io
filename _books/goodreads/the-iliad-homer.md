@@ -6,7 +6,7 @@ cover: https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/168
 isbn: '1324001801'
 date: '2025-01-02'
 started: '2025-01-02'
-released: "-800"
+released: "-750"
 status: Finished
 goodreads_book_id: '77265004'
 goodreads_url: https://www.goodreads.com/book/show/77265004
